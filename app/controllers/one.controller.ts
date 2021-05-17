@@ -1,10 +1,6 @@
 import Controller from '@ember/controller';
-import { ModelFrom } from '../lib/type-utils';
-import OneRoute from '../routes/one.route';
 
-export default class OneController extends Controller {
-  declare model: ModelFrom<OneRoute>;
-}
+export default class OneController extends Controller {}
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your controllers.
 declare module '@ember/controller' {

@@ -1,4 +1,4 @@
-import Model, { attr } from '@ember-data/object';
+import Model, { attr } from '@ember-data/model';
 
 export default class BankAccountModel extends Model {
   @attr()

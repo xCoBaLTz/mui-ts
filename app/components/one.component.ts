@@ -9,20 +9,15 @@ export default class OneComponent extends Component {
   public count: number = 0;
 
   @service
-  private _counter: CounterService;
-
-  constructor(counter: CounterService) {
-    super({}, counter);
-    this._counter = counter;
-  }
+  declare counter: CounterService;
 
   @action
   public increase(): void {
-    this.count = this._counter.increase(this.count);
+    this.count = this.counter.increase(this.count);
   }
 
   @action
   public decrease(): void {
-    this.count = this._counter.decrease(this.count);
+    this.count = this.counter.decrease(this.count);
   }
 }
