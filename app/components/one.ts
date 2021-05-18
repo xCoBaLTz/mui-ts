@@ -1,23 +1,23 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import Counter from 'mui-ts/services/counter';
 import { inject as service } from '@ember/service';
-import CounterService from 'mui-ts/services/counter.service';
 
-export default class OneComponent extends Component {
+export default class One extends Component {
   @tracked
-  public count: number = 0;
+  count: number = 0;
 
   @service
-  declare counter: CounterService;
+  declare counter: Counter;
 
   @action
-  public increase(): void {
+  increase(): void {
     this.count = this.counter.increase(this.count);
   }
 
   @action
-  public decrease(): void {
+  decrease(): void {
     this.count = this.counter.decrease(this.count);
   }
 }

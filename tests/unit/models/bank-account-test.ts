@@ -8,7 +8,7 @@ module('Unit | Model | bank account', function (hooks) {
   // Replace this with your real tests.
   test('it exists', function (assert) {
     let store = this.owner.lookup('service:store');
-    let model = run(() => store.createRecord('bank-account.model.ts', {}));
+    let model = run(() => store.createRecord('bank-account.ts', {}));
     assert.ok(model);
   });
 });
